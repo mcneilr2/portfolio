@@ -12,7 +12,7 @@ const introdata = {
         third: "A Passionate Skateboarder",
         fourth: "An Expert Problem-Solver"   
      },
-    description: "Full-stack developer with specialties in materials science, high-dimensional data processing and machine learning.  I'm curious, resilient, and always looking for a challenge.",
+    description: "Product developer with specialties in Python back-end architectures, materials science, high-dimensional data processing and machine learning.  I'm curious, resilient, and always looking for a challenge.",
 };
 
 const worktimeline = [{
