@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
@@ -37,7 +39,7 @@ export const Portfolio = () => {
                 <div className="content">
                   <p>Automation of a broadband infrared hyperspectroscopy apparatus
                   </p>
-                  <a href={'https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0401866'}>UBC Master's Dissertation</a>
+                  <Link to="/thesis">UBC Master's Dissertation</Link>
                 </div>
               </div>
               <div className="po_item">
