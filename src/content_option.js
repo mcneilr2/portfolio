@@ -8,8 +8,8 @@ const introdata = {
     title: "I’m Robyn McNeil (they/them), ",
     animated: {
         first: "A Software Engineer",
-        second: "A Materials Scientist",
-        third: "A Passionate Skateboarder",
+        second: "A Mad Scientist",
+        third: "A Constant Learner",
         fourth: "An Expert Problem-Solver"   
      },
     description: "Product developer with specialties in Python back-end architectures, materials science, high-dimensional data processing and machine learning.  I'm curious, resilient, and always looking for a challenge.",
