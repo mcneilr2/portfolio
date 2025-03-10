@@ -1,0 +1,91 @@
+// Colors
+$gold: gold;
+$orange: orange;
+$red: red;
+$white: #fff;
+$bg-dark: #000;
+
+// Global Styles
+.title {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  // align-items: top;
+  justify-content: start;
+  background: transparent;
+
+  &__text {
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+    background: linear-gradient(120deg, $gold, $white, $gold);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; // Makes sure only the gradient is visible
+    animation: shimmer 1s infinite linear;
+
+    &--no-shimmer {
+      animation: none;
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -100% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+
+  &__container {
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__explosion {
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $white;
+    background: linear-gradient(90deg, $gold, $orange, $red);
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    opacity: 0;
+    animation: explode 0.5s forwards;
+  }
+
+  @keyframes explode {
+    0% {
+      opacity: 0;
+      transform: scale(0.5) translate(0px, 0px);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  &__connector {
+    position: absolute;
+    width: 2px;
+    background: $gold;
+    top: -100%;
+    left: 50%;
+    transform-origin: bottom;
+  }
+}

@@ -2,9 +2,10 @@ import React from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
-import { introdata, meta } from "../../content_option";
+import { introdata, meta } from "../../data";
 import { Link } from "react-router-dom";
 import hero from "../../assets/images/me_leeside.jpg";
+import Breakout from "../../components/breakout/index";
 
 export const Home = () => {
   return (
@@ -25,7 +26,7 @@ export const Home = () => {
               <div className="intro mx-auto">
                 <h2 className="mb-1x">{introdata.title}</h2>
                 <h1 className="fluidz-48 mb-1x">
-                  <Typewriter
+                  {/* <Typewriter
                     options={{
                       strings: [
                         introdata.animated.first,
@@ -37,7 +38,10 @@ export const Home = () => {
                       loop: true,
                       deleteSpeed: 10,
                     }}
-                  />
+                  /> */}
+                </h1>
+                <h1>
+                  <Breakout />
                 </h1>
                 <p className="mb-1x">{introdata.description}</p>
                 <div className="intro_btn-action pb-5">

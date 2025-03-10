@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
-import { meta } from "../../content_option";
+import { meta } from "../../data";
 import skater from "../../assets/images/test.gif";
 import hypir from "../../assets/images/hypir.png";
 import afm from "../../assets/images/kherani.png";

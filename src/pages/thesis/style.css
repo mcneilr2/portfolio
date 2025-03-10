@@ -1,6 +1,6 @@
-@use "../../partials/mixins" as *;
-@use "../../partials/variables" as *;
-@use "../../partials/global" as *;
+p {
+  font-size: 14px;
+}
 
 /* Global Styles */
 body {
@@ -26,10 +26,9 @@ body {
 }
 
 .laser-svg path {
-  stroke: $gromGreen;
+  stroke: #adff2f;
   stroke-width: 3;
-  filter: drop-shadow(0px 0px 5px $gromGreen)
-    drop-shadow(0px 0px 15px $gromGreen);
+  filter: drop-shadow(0px 0px 5px #adff2f) drop-shadow(0px 0px 15px #adff2f);
 }
 
 /* Laser Tip (White Sparkle) */
@@ -45,7 +44,7 @@ body {
 
 /* Section Styles */
 section {
-  padding: $mp $mp;
+  padding: 1rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,29 +70,30 @@ footer {
   font-size: 14px;
 }
 
-.thesis {
-  &__text {
-    hyphens: none;
-    padding: 0rem $mp/2;
+.thesis__text {
+  -webkit-hyphens: none;
+          hyphens: none;
+  padding: 0rem 0.5rem;
+}
+.thesis__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .thesis__container {
+    flex-direction: row;
   }
-  &__container {
-    display: flex;
-    flex-direction: column;
-    @include tablet {
-      flex-direction: row;
-    }
-    align-items: center;
-  }
-  &__image {
-    width: 100%;
-    padding: $mp $mp;
-    &--sideby {
-      width: 100%;
-      padding: $mp $mp;
-    }
-  }
+}
+.thesis__image {
+  width: 100%;
+  padding: 1rem 1rem;
+}
+.thesis__image--sideby {
+  width: 100%;
+  padding: 1rem 1rem;
 }
 
 strong {
-  color: $gromGreen;
-}
+  color: #adff2f;
+}/*# sourceMappingURL=style.css.map */

@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import * as emailjs from "emailjs-com";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { meta, socialprofils } from "../../content_option";
+import { meta, socialprofils } from "../../data";
 import { Container, Row, Col, Alert } from "react-bootstrap";
-import { contactConfig } from "../../content_option";
+import { contactConfig } from "../../data";
 
 export const ContactUs = () => {
   const [formData, setFormdata] = useState({
