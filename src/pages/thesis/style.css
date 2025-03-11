@@ -1,0 +1,116 @@
+p {
+  font-size: 14px;
+}
+
+/* Global Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  background-color: #000000;
+  color: #fff;
+}
+
+.thesis__container {
+  text-align: center;
+  position: relative;
+}
+.thesis__title {
+  font-size: 2rem;
+}
+
+/* Section Styles */
+section {
+  padding: 1rem 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0rem;
+}
+
+.motivations,
+.optics,
+.software {
+  background-color: #333;
+}
+.motivations__text,
+.optics__text,
+.software__text {
+  -webkit-hyphens: none;
+          hyphens: none;
+  padding: 0rem 0.5rem;
+}
+.motivations__container,
+.optics__container,
+.software__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .motivations__container,
+  .optics__container,
+  .software__container {
+    flex-direction: row;
+  }
+}
+.motivations__image, .motivations__image--noborder,
+.optics__image,
+.optics__image--noborder,
+.software__image,
+.software__image--noborder {
+  width: 100%;
+  padding: 1rem 1rem;
+}
+
+.optics__image {
+  padding: 0rem;
+  border: 1rem solid white;
+  margin-bottom: 1rem;
+}
+.optics__image--noborder {
+  border: 0rem;
+}
+
+strong {
+  color: #adff2f;
+}
+
+.button {
+  margin: 2rem 0rem;
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  background-color: #adff2f;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 0 #adff2f, 0 0 80px #adff2f, 0 0 200px #adff2f;
+  transition: all 2s ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 0 0 20px #adff2f, 0 0 60px #adff2f, 0 0 100px #adff2f;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 10px #adff2f, 0 0 40px #adff2f, 0 0 80px #adff2f;
+  }
+  50% {
+    box-shadow: 0 0 20px #adff2f, 0 0 60px #adff2f, 0 0 100px #adff2f;
+  }
+  100% {
+    box-shadow: 0 0 10px #adff2f, 0 0 40px #adff2f, 0 0 80px #adff2f;
+  }
+}
+.button {
+  animation: glowing 2s infinite alternate;
+}/*# sourceMappingURL=style.css.map */

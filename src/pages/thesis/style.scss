@@ -1,0 +1,134 @@
+@use "../../partials/mixins" as *;
+@use "../../partials/variables" as *;
+@use "../../partials/global" as *;
+
+/* Global Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  background-color: $black;
+  color: #fff;
+}
+
+.thesis {
+  &__container {
+    text-align: center;
+    position: relative;
+  }
+  &__title {
+    font-size: 2rem;
+  }
+}
+// /* Laser SVG */
+// .laser-svg {
+//   position: absolute;
+//   transform: translateX(-50%);
+//   width: 100%; /* Wider path */
+//   height: 100%;
+//   z-index: 1;
+//   pointer-events: none;
+// }
+
+// .laser-svg path {
+//   stroke: $gromGreen;
+//   stroke-width: 3;
+//   filter: drop-shadow(0px 0px 5px $gromGreen)
+//     drop-shadow(0px 0px 15px $gromGreen);
+// }
+
+// /* Laser Tip (White Sparkle) */
+// .laser-tip {
+//   position: fixed;
+//   width: 10px;
+//   height: 10px;
+//   background: white;
+//   border-radius: 50%;
+//   filter: drop-shadow(0px 0px 8px white) drop-shadow(0px 0px 15px white);
+//   z-index: 3;
+// }
+
+/* Section Styles */
+section {
+  padding: $mp $mp;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: $mp 0rem;
+}
+
+.motivations,
+.optics,
+.software {
+  background-color: $bg-grey;
+  &__text {
+    hyphens: none;
+    padding: 0rem $mp/2;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+    }
+    align-items: center;
+  }
+  &__image,
+  &__image--noborder {
+    width: 100%;
+    padding: $mp $mp;
+  }
+}
+
+.optics__image {
+  padding: 0rem;
+  border: $mp solid white;
+  margin-bottom: $mp;
+  &--noborder {
+    border: 0rem;
+  }
+}
+
+strong {
+  color: $gromGreen;
+}
+
+.button {
+  margin: $mp * 2 0rem;
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: $black;
+  background-color: $gromGreen;
+  border: none;
+  border-radius: $mp/2;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 0 $gromGreen, 0 0 80px $gromGreen, 0 0 200px $gromGreen;
+  transition: all 2s ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 0 0 20px $gromGreen, 0 0 60px $gromGreen, 0 0 100px $gromGreen;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 10px $gromGreen, 0 0 40px $gromGreen, 0 0 80px $gromGreen;
+  }
+  50% {
+    box-shadow: 0 0 20px $gromGreen, 0 0 60px $gromGreen, 0 0 100px $gromGreen;
+  }
+  100% {
+    box-shadow: 0 0 10px $gromGreen, 0 0 40px $gromGreen, 0 0 80px $gromGreen;
+  }
+}
+
+.button {
+  animation: glowing 2s infinite alternate;
+}
