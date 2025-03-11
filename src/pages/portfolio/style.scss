@@ -1,14 +1,6 @@
-p {
-  font-size: 14px;
-}
-
-strong {
-  color: #adff2f;
-}
-
-span {
-  font-weight: 700;
-}
+@use "../../partials/mixins" as *;
+@use "../../partials/variables" as *;
+@use "../../partials/global" as *;
 
 .po_items_ho {
   column-width: 15em;
@@ -17,9 +9,7 @@ span {
   column-gap: 4rem;
   -moz-column-gap: 4rem;
   -webkit-column-gap: 4rem;
-}
-@media (min-width: 768px) {
-  .po_items_ho {
+  @include tablet {
     display: flex;
     flex-direction: column;
   }
@@ -37,10 +27,8 @@ span {
   transition: 0.3s ease;
   font-size: 0;
   min-height: 300px;
-}
-@media (min-width: 768px) {
-  .po_item {
-    margin-bottom: 3rem;
+  @include tablet {
+    margin-bottom: $lp;
   }
 }
 
@@ -78,10 +66,7 @@ span {
 .content > p,
 a {
   font-size: 1rem;
-}
-@media (min-width: 768px) {
-  .content > p,
-  a {
+  @include tablet {
     font-size: 2rem;
   }
 }
@@ -110,4 +95,4 @@ a {
 
 .po_item .content a:hover {
   text-decoration: none;
-}/*# sourceMappingURL=style.css.map */
+}

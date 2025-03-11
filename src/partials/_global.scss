@@ -1,0 +1,13 @@
+@use "./variables" as *;
+
+p {
+  font-size: 14px;
+}
+
+strong {
+  color: $gromGreen;
+}
+
+span {
+  font-weight: 700;
+}

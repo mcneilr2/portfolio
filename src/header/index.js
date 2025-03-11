@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./style.css";
+import "./style.scss";
 import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { logotext ,socialprofils } from "../content_option";
@@ -39,6 +39,11 @@ const Headermain = () => {
                   </li>
                   <li className="menu_item">
                     <Link  onClick={handleToggle} to="/portfolio" className="my-3"> Portfolio</Link>
+                    <ul>
+                    <li className="menu_item--sub">
+                  <Link onClick={handleToggle} to="/thesis" > MASc Thesis</Link>
+                  </li>
+                    </ul>
                   </li>
                   <li className="menu_item">
                   <Link onClick={handleToggle} to="/about" className="my-3">About</Link>

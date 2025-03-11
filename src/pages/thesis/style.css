@@ -2,6 +2,14 @@ p {
   font-size: 14px;
 }
 
+strong {
+  color: #adff2f;
+}
+
+span {
+  font-weight: 700;
+}
+
 /* Global Styles */
 body {
   font-family: "Arial", sans-serif;
@@ -71,10 +79,6 @@ section {
 }
 .optics__image--noborder {
   border: 0rem;
-}
-
-strong {
-  color: #adff2f;
 }
 
 .button {

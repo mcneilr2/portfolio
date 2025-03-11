@@ -39,7 +39,11 @@ export const Home = () => {
                     }}
                   />
                 </h1>
-                <p className="mb-1x">{introdata.description}</p>
+                <p className="mb-1x">Multidisciplinary <strong>Software Engineer</strong> with a broad academic and practical background including <span className="specialties">Computational Materials Science, Manufacturing</span> and <span className="specialties">Applied Machine Learning</span>.  
+                </p>
+                <p className="mb-1x">
+                Looking for a challenging role with a dedicated team, where my broad range of technical expertise, rigorous problem-solving approach and resiliency can be applied to scalable solutions.  
+                </p>
                 <div className="intro_btn-action pb-5">
                   <Link to="/portfolio" className="text_2">
                     <div id="button_p" className="ac_btn btn ">

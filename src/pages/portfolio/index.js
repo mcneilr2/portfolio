@@ -1,7 +1,8 @@
 import React from "react";
-import "./style.css";
+import "./style.scss";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { meta } from "../../content_option";
 import skater from "../../assets/images/test.gif";
 import hypir from "../../assets/images/hypir.png";
@@ -37,7 +38,7 @@ export const Portfolio = () => {
                 <div className="content">
                   <p>Automation of a broadband infrared hyperspectroscopy apparatus
                   </p>
-                  <a href={'https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0401866'}>UBC Master's Dissertation</a>
+                  <Link to="/thesis">Master's Thesis Review</Link>
                 </div>
               </div>
               <div className="po_item">

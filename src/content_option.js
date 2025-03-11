@@ -12,7 +12,6 @@ const introdata = {
         third: "A Constant Learner",
         fourth: "An Expert Problem-Solver"   
      },
-    description: "Product developer with specialties in Python back-end architectures, materials science, high-dimensional data processing and machine learning.  I'm curious, resilient, and always looking for a challenge.",
 };
 
 const worktimeline = [{
