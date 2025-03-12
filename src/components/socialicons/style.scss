@@ -1,25 +1,6 @@
-p {
-  font-size: 0.875rem;
-}
-@media (min-width: 768px) {
-  p {
-    font-size: 1.125rem;
-  }
-}
-@media (min-width: 1280px) {
-  p {
-    font-size: 1.5rem;
-  }
-}
-
-strong {
-  color: #adff2f;
-}
-
-span {
-  font-weight: 700;
-}
-
+@use "../../partials/mixins" as *;
+@use "../../partials/variables" as *;
+@use "../../partials/global" as *;
 .stick_follow_icon {
   top: 50%;
   left: 30px;
@@ -48,21 +29,17 @@ span {
   height: 20px;
   color: var(--text-color);
   font-size: 12px;
+  @include tablet {
+    font-size: 14px;
+  }
+  @include desktop {
+    font-size: 18px;
+  }
   font-weight: 600;
   line-height: 1.2;
   white-space: nowrap;
   position: relative;
   transform: rotate(-90deg);
-}
-@media (min-width: 768px) {
-  .stick_follow_icon p {
-    font-size: 14px;
-  }
-}
-@media (min-width: 1280px) {
-  .stick_follow_icon p {
-    font-size: 18px;
-  }
 }
 
 .stick_follow_icon ul li {
@@ -77,16 +54,14 @@ span {
   top: 9px;
   right: -48px;
   width: 40px;
+  @include tablet {
+    width: 25px;
+  }
   height: 1px;
   content: "";
   display: block;
   position: absolute;
   background-color: var(--text-color);
-}
-@media (min-width: 768px) {
-  .stick_follow_icon p:after {
-    width: 25px;
-  }
 }
 
 @media only screen and (max-width: 991px) {
@@ -120,4 +95,4 @@ span {
     margin-bottom: 29px;
     margin-right: 10px;
   }
-}/*# sourceMappingURL=style.css.map */
+}

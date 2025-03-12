@@ -6,92 +6,128 @@
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
-  background-color: $black;
   color: #fff;
 }
 
-.thesis {
-  &__container {
-    text-align: center;
-    position: relative;
-  }
-  &__title {
-    font-size: 2rem;
+/* Thesis Section */
+.thesis__container {
+  text-align: center;
+}
+
+.thesis__title {
+  font-size: 2rem;
+  @include desktop {
+    font-size: 4rem;
   }
 }
-// /* Laser SVG */
-// .laser-svg {
-//   position: absolute;
-//   transform: translateX(-50%);
-//   width: 100%; /* Wider path */
-//   height: 100%;
-//   z-index: 1;
-//   pointer-events: none;
-// }
-
-// .laser-svg path {
-//   stroke: $gromGreen;
-//   stroke-width: 3;
-//   filter: drop-shadow(0px 0px 5px $gromGreen)
-//     drop-shadow(0px 0px 15px $gromGreen);
-// }
-
-// /* Laser Tip (White Sparkle) */
-// .laser-tip {
-//   position: fixed;
-//   width: 10px;
-//   height: 10px;
-//   background: white;
-//   border-radius: 50%;
-//   filter: drop-shadow(0px 0px 8px white) drop-shadow(0px 0px 15px white);
-//   z-index: 3;
-// }
 
 /* Section Styles */
 section {
-  padding: $mp $mp;
-  min-height: 100vh;
+  padding: $mp;
+  margin: $mp 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: $mp 0rem;
+
+  @include tablet {
+    padding: $lp;
+    margin: $lp 0;
+  }
+
+  @include desktop {
+    padding: 5rem;
+    margin: 5rem 0;
+  }
 }
 
+/* Background Styling */
+#motivations,
+#optics,
+#software {
+  background: linear-gradient(45deg, #1a1a1a, #333);
+}
+
+/* Shared Section Styles */
 .motivations,
 .optics,
 .software {
-  background-color: $bg-grey;
   &__text {
     hyphens: none;
-    padding: 0rem $mp/2;
+    padding: 0 $mp/2;
+
+    @include tablet {
+      padding: 0 $lp;
+    }
+    @include desktop {
+      padding: 0 5rem;
+    }
   }
-  &__container {
+
+  &__container,
+  &__container--large {
     display: flex;
     flex-direction: column;
+    align-items: center;
+
     @include tablet {
       flex-direction: row;
     }
-    align-items: center;
   }
+
   &__image,
   &__image--noborder {
     width: 100%;
-    padding: $mp $mp;
+    padding: $mp;
   }
 }
 
+/* Optics & Software Image Sizes */
+.optics,
+.software {
+  @include tablet {
+    &__container--small {
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__image,
+    &__image--noborder {
+      width: 20rem;
+
+      @include desktop {
+        width: 30rem;
+      }
+    }
+  }
+}
+
+/* Adjustments for Software Section */
+.software__container--large {
+  flex-direction: column;
+}
+
+.software__image--large {
+  width: 100%;
+  padding: $mp;
+
+  @include tablet {
+    padding: $lp;
+  }
+}
+
+/* Optics Image */
 .optics__image {
-  padding: 0rem;
-  border: $mp solid white;
-  margin-bottom: $mp;
-  &--noborder {
-    border: 0rem;
-  }
+  padding: $mp;
+  background-color: white;
+  margin: $mp 0;
 }
 
+/* Button Styles */
 .button {
-  margin: $mp * 2 0rem;
+  margin: $mp * 2 0;
   display: inline-block;
   padding: 12px 24px;
   font-size: 18px;
@@ -107,12 +143,23 @@ section {
   overflow: hidden;
   box-shadow: 0 0 0 $gromGreen, 0 0 80px $gromGreen, 0 0 200px $gromGreen;
   transition: all 2s ease-in-out;
+
+  @include tablet {
+    font-size: 1.25rem;
+  }
+
+  @include desktop {
+    font-size: 1.375rem;
+  }
+
+  &:hover {
+    box-shadow: 0 0 20px $gromGreen, 0 0 60px $gromGreen, 0 0 100px $gromGreen;
+  }
+
+  animation: glowing 2s infinite alternate;
 }
 
-.button:hover {
-  box-shadow: 0 0 20px $gromGreen, 0 0 60px $gromGreen, 0 0 100px $gromGreen;
-}
-
+/* Glowing Animation */
 @keyframes glowing {
   0% {
     box-shadow: 0 0 10px $gromGreen, 0 0 40px $gromGreen, 0 0 80px $gromGreen;
@@ -123,8 +170,4 @@ section {
   100% {
     box-shadow: 0 0 10px $gromGreen, 0 0 40px $gromGreen, 0 0 80px $gromGreen;
   }
-}
-
-.button {
-  animation: glowing 2s infinite alternate;
 }

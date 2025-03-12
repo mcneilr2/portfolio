@@ -1,5 +1,15 @@
 p {
-  font-size: 14px;
+  font-size: 0.875rem;
+}
+@media (min-width: 768px) {
+  p {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 1280px) {
+  p {
+    font-size: 1.5rem;
+  }
 }
 
 strong {
@@ -14,52 +24,89 @@ span {
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
-  background-color: #000000;
   color: #fff;
 }
 
+/* Thesis Section */
 .thesis__container {
   text-align: center;
-  position: relative;
 }
+
 .thesis__title {
   font-size: 2rem;
+}
+@media (min-width: 1280px) {
+  .thesis__title {
+    font-size: 4rem;
+  }
 }
 
 /* Section Styles */
 section {
-  padding: 1rem 1rem;
-  min-height: 100vh;
+  padding: 1rem;
+  margin: 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1rem 0rem;
+}
+@media (min-width: 768px) {
+  section {
+    padding: 3rem;
+    margin: 3rem 0;
+  }
+}
+@media (min-width: 1280px) {
+  section {
+    padding: 5rem;
+    margin: 5rem 0;
+  }
 }
 
-.motivations,
-.optics,
-.software {
-  background-color: #333;
+/* Background Styling */
+#motivations,
+#optics,
+#software {
+  background: linear-gradient(45deg, #1a1a1a, #333);
 }
+
+/* Shared Section Styles */
 .motivations__text,
 .optics__text,
 .software__text {
   -webkit-hyphens: none;
           hyphens: none;
-  padding: 0rem 0.5rem;
+  padding: 0 0.5rem;
 }
-.motivations__container,
+@media (min-width: 768px) {
+  .motivations__text,
+  .optics__text,
+  .software__text {
+    padding: 0 3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .motivations__text,
+  .optics__text,
+  .software__text {
+    padding: 0 5rem;
+  }
+}
+.motivations__container, .motivations__container--large,
 .optics__container,
-.software__container {
+.optics__container--large,
+.software__container,
+.software__container--large {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media (min-width: 768px) {
-  .motivations__container,
+  .motivations__container, .motivations__container--large,
   .optics__container,
-  .software__container {
+  .optics__container--large,
+  .software__container,
+  .software__container--large {
     flex-direction: row;
   }
 }
@@ -69,20 +116,57 @@ section {
 .software__image,
 .software__image--noborder {
   width: 100%;
-  padding: 1rem 1rem;
+  padding: 1rem;
 }
 
+/* Optics & Software Image Sizes */
+@media (min-width: 768px) {
+  .optics__container--small,
+  .software__container--small {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .optics__image, .optics__image--noborder,
+  .software__image,
+  .software__image--noborder {
+    width: 20rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .optics__image, .optics__image--noborder,
+  .software__image,
+  .software__image--noborder {
+    width: 30rem;
+  }
+}
+
+/* Adjustments for Software Section */
+.software__container--large {
+  flex-direction: column;
+}
+
+.software__image--large {
+  width: 100%;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .software__image--large {
+    padding: 3rem;
+  }
+}
+
+/* Optics Image */
 .optics__image {
-  padding: 0rem;
-  border: 1rem solid white;
-  margin-bottom: 1rem;
-}
-.optics__image--noborder {
-  border: 0rem;
+  padding: 1rem;
+  background-color: white;
+  margin: 1rem 0;
 }
 
+/* Button Styles */
 .button {
-  margin: 2rem 0rem;
+  margin: 2rem 0;
   display: inline-block;
   padding: 12px 24px;
   font-size: 18px;
@@ -98,12 +182,23 @@ section {
   overflow: hidden;
   box-shadow: 0 0 0 #adff2f, 0 0 80px #adff2f, 0 0 200px #adff2f;
   transition: all 2s ease-in-out;
+  animation: glowing 2s infinite alternate;
 }
-
+@media (min-width: 768px) {
+  .button {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .button {
+    font-size: 1.375rem;
+  }
+}
 .button:hover {
   box-shadow: 0 0 20px #adff2f, 0 0 60px #adff2f, 0 0 100px #adff2f;
 }
 
+/* Glowing Animation */
 @keyframes glowing {
   0% {
     box-shadow: 0 0 10px #adff2f, 0 0 40px #adff2f, 0 0 80px #adff2f;
@@ -114,7 +209,4 @@ section {
   100% {
     box-shadow: 0 0 10px #adff2f, 0 0 40px #adff2f, 0 0 80px #adff2f;
   }
-}
-.button {
-  animation: glowing 2s infinite alternate;
 }/*# sourceMappingURL=style.css.map */

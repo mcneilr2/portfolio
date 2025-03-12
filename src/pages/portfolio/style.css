@@ -1,5 +1,15 @@
 p {
-  font-size: 14px;
+  font-size: 0.875rem;
+}
+@media (min-width: 768px) {
+  p {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 1280px) {
+  p {
+    font-size: 1.5rem;
+  }
 }
 
 strong {

@@ -63,20 +63,25 @@ export const Thesis = () => {
     components like mirrors and a <strong>Thorlabs infinity-corrected objective lens</strong>. This setup ensured precise excitation beam and outgoing signal alignment,
     and confined delivery of laser energy to the target material.</p>
     </div>
+    <div className="optics__container--small">
     <img className = "optics__image--noborder" src={outcad} alt="Hyperspectrometer CAD" />
     <p className = "optics__text">The outgoing infrared (IR) signal
     was spatially discretized using <strong>Zaber Precision Linear Stages</strong> and passive optics, allowing sub-micron 2D control of signal collection. 
     The IR signal was then directed to the <strong>Fourier Transform Infrared (FTIR) Spectrometer</strong>.
     </p>
+    </div>
+    <div className="optics__container--small">
     <img className = "optics__image" src={maps} alt="Hyperspectrometer CAD" />
     <p className = "optics__text">Finally, the discritized spectral data was fed into a custom black-body normalized spectral algorithm built in <strong>Python</strong>, enabling <strong>2D Thermal Map Generation</strong>.
         </p>
+    </div>
       </motion.section>
 
       {/* Section 3: HypIR Software Stack */}
       <motion.section id="software" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.4 }}>
         <h2><strong>HypIR</strong> Software Stack</h2>
-        <img className = "software__image--noborder" src={codeblocks} alt="IR Signal Results" />
+        <div className = "software__container--large">
+        <img className = "software__image--large" src={codeblocks} alt="IR Signal Results" />
         <p className="software__text">
         HypIR is a lean stack comprised of low-level, well documented and scalable languages and frameworks, 
         as well as hardware specified languages and SDK's.
@@ -90,12 +95,15 @@ export const Thesis = () => {
     An <strong>SQLite3</strong> database was implemented to store and manage spectral data along with all
     experimental parameters. 
     </p>
+    </div>
+    <div className="software__container--small">
     <img className = "software__image--noborder" src={landing} alt="IR Signal Results" />
 
     <p className="software__text">
-    The resulting full-stack software represents an integral step in transforming
-    an optics table prototype into an effective, marketable scientific instrument.
+    The resulting <strong>Full-Stack Application</strong> represents an integral step in transforming
+    an optics table prototype into a repeating, <strong>marketable, scientific instrument.</strong>
      </p>
+     </div>
       </motion.section>
     </div>
   );
