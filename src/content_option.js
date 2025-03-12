@@ -63,12 +63,24 @@ const worktimeline = [{
 
 const skills = [
     {
+        name: "Python",
+        value: 100,
+    },
+    {
         name: "Javascript",
         value: 95,
     },
-    {
-        name: "Python",
+        {
+        name: "C++",
         value: 90,
+    },
+    {
+        name: "C",
+        value: 70,
+    },
+    {
+        name: "Onshape/Fusion360/Solidworks/AutoCAD",
+        value: 100,
     },
     {
         name: "React.js",
@@ -91,20 +103,8 @@ const skills = [
         value: 85,
     },
     {
-        name: "C++",
-        value: 70,
-    },
-    {
-        name: "C",
-        value: 70,
-    },
-    {
         name: "Scikit-learn",
-        value: 65,
-    },
-    {
-        name: "Onshape/Fusion360/Solidworks/AutoCAD",
-        value: 80,
+        value: 40,
     },
 ];
 
