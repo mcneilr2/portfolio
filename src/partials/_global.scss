@@ -1,9 +1,12 @@
 @use "./variables" as *;
+@use "./mixins" as *;
 
 p {
-  font-size: 14px;
+  font-size: 0.875rem;
+  @include tablet {
+    font-size: 1.125rem;
+  }
 }
-
 strong {
   color: $gromGreen;
 }

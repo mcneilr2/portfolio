@@ -1,3 +1,7 @@
+@use "../../partials/mixins" as *;
+@use "../../partials/variables" as *;
+@use "../../partials/global" as *;
+
 section {
   flex: 1 0 auto;
   position: relative;
@@ -64,6 +68,9 @@ section {
 /* @media (max-width: 991.98px) { */
 .intro_sec .intro {
   max-width: 700px;
+  @include desktop {
+    max-width: 1000px;
+  }
   padding-left: 20px;
   padding-right: 20px;
 }

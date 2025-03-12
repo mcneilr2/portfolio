@@ -7,10 +7,10 @@ const meta = {
 const introdata = {
     title: "I’m Robyn McNeil (they/them), ",
     animated: {
-        first: "A Software Engineer",
-        second: "A Mad Scientist",
-        third: "A Constant Learner",
-        fourth: "An Expert Problem-Solver"   
+        first: "Software Engineer",
+        second: "Materials Scientist",
+        third: "Always Learning",
+        fourth: "Expert Problem-Solver"   
      },
 };
 

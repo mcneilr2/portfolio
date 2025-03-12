@@ -55,12 +55,14 @@ export const Thesis = () => {
       {/* Section 2: Gaussian Optics & Opto-Mechanics */}
       <motion.section id="optics" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>
         <h2 className = "optics__title">Opto-Mechanical Design</h2>
+        <div className = "optics__container--small">
         <img className = "optics__image" src={schematic} alt="Hyperspectrometer Schematic" />
         <p className = "optics__text">
         To investigate the heat trap effect, a <strong>3D Hyperspectroscopy</strong> system was developed, incorporating advanced optical and linear motion components.
         A high-powered <strong>532nm, 5W Solid-State Laser</strong> was directed towards the sample using passive optical
     components like mirrors and a <strong>Thorlabs infinity-corrected objective lens</strong>. This setup ensured precise excitation beam and outgoing signal alignment,
     and confined delivery of laser energy to the target material.</p>
+    </div>
     <img className = "optics__image--noborder" src={outcad} alt="Hyperspectrometer CAD" />
     <p className = "optics__text">The outgoing infrared (IR) signal
     was spatially discretized using <strong>Zaber Precision Linear Stages</strong> and passive optics, allowing sub-micron 2D control of signal collection. 
